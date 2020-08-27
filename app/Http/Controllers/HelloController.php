@@ -7,12 +7,21 @@ use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
-    public function index(Request $request){
-        $data = [
-            'msg'=>'これはBladeを利用したサンプルです。'
-        ];
-        return view('hello.index', $data);
+    public function index(){
+        $data = ["one", "two", "three", "four", "five"];
+        return view("hello.index", ["data"=>$data]);
     }
+    // @foreachの例 start
+    // public function index(){
+    //     return view('hello.index', ['msg'=>'']);
+    // }
+
+    // public function post(Request $request){
+    //     return view('hello.index', ['msg'=>$request->message]);
+    // }
+    // @foreachの例 end
+
+
     // public function index(Request $request, Response $response){
     //     $req_url = $request->url();
     //     $req_fullUrl = $request->fullUrl();

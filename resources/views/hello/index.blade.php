@@ -19,12 +19,52 @@
     </style>
 </head>
 <body>
-    <h1>Blade/Index</h1>
-    <p>{{$msg}}</p>
+    <!-- <h1>Blade/Index</h1>
+    @isset($msg)
+    <p>こんにちは、{{$msg}}さん。</p>
+    @else
+    <p>なんか書いてよぉ～</p>
+    @endisset
     <form action="/hello" method="post">
         @csrf
-        <input type="text" name="msg" id="">
+        <input type="text" name="message" id="">
         <input type="submit" value="submit">
-    </form>
+    </form> -->
+
+    <!-- <h1>Blade/Index(foreach)</h1>
+    <p>$#064;foreachディレクティブの例</p>
+    <ol>
+        @foreach($data as $item)
+        <li>{{$item}}</li>
+        @endforeach
+    </ol> -->
+
+    <!-- <h1>Blade/Index(for...break)</h1>
+    <p>&#064;forディレクティブの例</p>
+    <ol>
+        @for($i=1; $i<100; $i++)
+        @if($i % 2 == 1)
+            @continue
+        @elseif($i <= 10)
+        <li>No, {{$i}}</li>
+        @else
+            @break
+        @endif
+        @endfor
+    </ol> -->
+
+    <!-- <h1>Blade/Index(loop)</h1>
+    <p>&#064;forディレクティブの例</p>
+    @foreach($data as $item)
+    @if($loop->first)
+    <p>※データ一覧</p>
+    <ul>
+    @endif
+        <li>No, {{$loop->iteration}} . {{$item}}</li>
+    @if($loop->last)
+    </ul>
+    <p>---ここまで</p>
+    @endif
+    @endforeach -->
 </body>
 </html>
