@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Laravel_nyuumon
+        App\Providers\HelloServiceProvider::class,
+
     ],
 
     /*
