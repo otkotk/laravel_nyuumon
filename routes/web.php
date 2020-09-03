@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\HelloMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +66,13 @@ Route::get('/', function () {
 // Route::get('hello', function(){
 //     return view('hello.index');
 // });
+
+// Route::get('hello', 'HelloController@index');
+// Route::post('hello', 'HelloController@post');
+
+// Route::get('hello', 'HelloController@index')->middleware(HelloMiddleware::class);
+// Route::get('hello', 'HelloController@index');
+// Route::get('hello', 'HelloController@index')->middleware('helo');
 
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
