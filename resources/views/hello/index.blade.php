@@ -15,6 +15,26 @@
 <form action="/hello" method="post">
     <table>
         @csrf
+        @if ($errors->has('msg'))
+            <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('msg')}}</td>
+            </tr>
+        @endif
+        <tr>
+            <th>Message: </th>
+            <td><input type="text" name="msg" id="" value="{{old('msg')}}"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="submit" value="send"></td>
+        </tr>
+    </table>
+</form>
+
+{{-- <form action="/hello" method="post">
+    <table>
+        @csrf
         @error('name')
             <tr>
                 <th>ERROR</th>
@@ -47,7 +67,7 @@
             <th></th><td><input type="submit" value="send"></td>
         </tr>
     </table>
-</form>
+</form> --}}
 
 {{-- <p>ここが本文のコンテンツです。</p>
 <p>これは、<middleware>google.com</middleware>へのリンクです。</p>
