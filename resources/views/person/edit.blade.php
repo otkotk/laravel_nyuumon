@@ -1,10 +1,10 @@
 @extends('layouts.helloapp')
 
-@section('title', "Person.Add")
+@section('title', 'Person.Edit')
 
 @section('menubar')
     @parent
-    新規作成ページ
+    編集ページ
 @endsection
 
 @section('content')
@@ -17,29 +17,30 @@
             </ul>
         </div>
     @endif
-    <form action="/person/add" method="post">
+    <form action="/person/edit" method="post">
     <table>
         @csrf
+        <input type="hidden" name="id" value="{{$form->id}}">
         <tr>
             <th>name: </th>
-            <td><input type="text" name="name" id="" value="{{old('name')}}"></td>
+            <td><input type="text" name="name" id="" value="{{$form->name}}"></td>
         </tr>
         <tr>
             <th>mail: </th>
-            <td><input type="text" name="mail" id="" value="{{old('mail')}}"></td>
+            <td><input type="text" name="mail" id="" value="{{$form->mail}}"></td>
         </tr>
         <tr>
             <th>age: </th>
-            <td><input type="number" name="age" id="" value="{{old('age')}}"></td>
+            <td><input type="number" name="age" id="" value="{{$form->age}}"></td>
         </tr>
         <tr>
             <th></th>
-            <td><input type="submit" value="submit"></td>
+            <td><input type="submit" value="send"></td>
         </tr>
     </table>
     </form>
 @endsection
 
 @section('footer')
-    copyright 2020 ota.
+    copyright 2020 ora,
 @endsection
