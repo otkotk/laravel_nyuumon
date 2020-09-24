@@ -4,4 +4,4 @@ Laravelの入門書の内容を、Githubで管理！
 
 購読した本はこちら↓
 PHPフレームワーク Laravel入門 第2版
-https://www.amazon.co.jp/dp/B08625YD7H/ref=sspa_dk_detail_0?psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFVT0ZQQlpYRlNWNFAmZW5jcnlwdGVkSWQ9QTA1NDE3MzkxWkZJRlE5NldXOEc4JmVuY3J5cHRlZEFkSWQ9QTJRMDhPNUZDUzM2Q08md2lkZ2V0TmFtZT1zcF9kZXRhaWwmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl
+https://www.amazon.co.jp/dp/B07CLLW4MX/
